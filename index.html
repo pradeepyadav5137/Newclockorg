@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+
+    </div>
+
+
+
+    <script>
+        setInterval(() => {
+            let clock="" ;
+            
+            document.querySelector("#wrapper").innerHTML += " ";
+        
+
+    const dt =    new Date();
+    //    console.log(dt.getDay())
+    
+    clock += " " + getdayName(dt.getDay());
+    clock += " , " + dt.getDate();
+    clock += " / " + getMonthName((dt.getMonth() + 1));
+    clock += " / " + dt.getFullYear();
+    clock += "  " + addzero(dt.getHours());
+    clock += " : " + addzero(dt.getMinutes());
+    clock += " : " + addzero(dt.getSeconds());
+    
+    document.querySelector("#wrapper").innerHTML = clock; 
+
+  
+    // document.write(sec);
+
+}, 1000);
+
+function getdayName( number){
+    day=[ "sunday" , "Monday" ," Tuesday" , " wednesday" , "Thursday" , " Friday" , "Saturday"]
+     return day[number]; 
+}
+
+function getMonthName(number){
+    month =[ "January" , "February" ,"March" , "April" , "May" , "June" ,"July" , "August" , "September" ," October" , "November" , " December"]
+    return month[number-1];
+}
+
+function addzero(zero){
+    if(zero<10)
+    return "0" + zero;
+    else
+    return zero;
+}
+
+    </script>
+</body>
+</html>
