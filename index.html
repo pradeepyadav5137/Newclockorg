@@ -23,10 +23,10 @@
     //    console.log(dt.getDay())
     
     clock += " " + getdayName(dt.getDay());
-    clock += " , " + dt.getDate();
+    clock += " , " + addzero(dt.getDate());
     clock += " / " + getMonthName((dt.getMonth() + 1));
     clock += " / " + dt.getFullYear();
-    clock += "  " + addzero(dt.getHours());
+    clock += "    " + addzero(dt.getHours());
     clock += " : " + addzero(dt.getMinutes());
     clock += " : " + addzero(dt.getSeconds());
     
